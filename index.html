@@ -8,10 +8,48 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1></h1>
-    <img src="images/photo1.jpg" alt="mine picture">
+    <h1 id="helloWorld"></h1>
+    <img src="images/photo1.jpg" alt="my picture">
 
     <button>Change user</button>
-    <script src="main.js"></script>
+
+    <button class="go-home">Go home</button>
+    <!-- <script src="main.js"></script> -->
+     <script src="1-JavaScript-firstStep/array.js"></script>
+
+     <script>
+        const helloWorld = document.getElementById("helloWorld");
+        
+        helloWorld.textContent = "Hello world";
+        helloWorld.style.cssText = "color: red; padding: 20px; border-bottom: blue; font-size: 100px";
+        // document.querySelector("html").addEventListener("click", function() {
+        //   alert("ouch! Stop poking me!");
+        // });
+
+        // const goHome = document.querySelector("go-home");
+
+        // goHome.addEventListener("click", () => {
+        //   const homeLink = document.createElement("a");
+        //   homeLink.setAttribute("href", www.facebook.com);
+        //   homeLink.textContent = "facebook";
+        //   document.body.appendChild("homeLink");
+        // });
+
+        function createParagraph() {
+  const para = document.createElement("p");
+  para.textContent = "You clicked the button!";
+  document.body.appendChild(para);
+}
+
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
+}
+
+const body = document.querySelector("body");
+body.style.cssText = "text-align: center";
+      
+     </script>
 </body>
 </html>

@@ -35,3 +35,6 @@ function setUserName() {
 myButton.onclick = () => {
     setUserName();
 }
+
+const body = document.querySelector("body");
+body.style.textAlign = "center";
